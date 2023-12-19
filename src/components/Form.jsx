@@ -35,7 +35,7 @@ export default function Form() {
   useEffect(() => {
     if (Object.keys(error).length === 0 && submit) {
       axios
-        .post("http://localhost:8080/", user)
+        .post("https://flexmoney-assignment-3oagqgd42-gulshan-bhatis-projects.vercel.app/", user)
         .then((res) => console.log(res.data));
 
       setUser({
