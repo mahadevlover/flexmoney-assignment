@@ -35,12 +35,11 @@ export default function Form() {
   useEffect(() => {
     if (Object.keys(error).length === 0 && submit) {
       axios
-        .post("https://flexmoney-assignment-3oagqgd42-gulshan-bhatis-projects.vercel.app/", user)
+        .post("https://flexmoney-assignment-neon.vercel.app/", user)
         .then((res) => console.log(res.data));
 
       setUser({
         name: "",
-        age: "",
         gender: "",
         contact: "",
         fee: "",
@@ -48,7 +47,7 @@ export default function Form() {
       });
       setSuccess(true);
     }
-  });
+  }, [error]);
 
   const validate = (values) => {
     const errors = {};
